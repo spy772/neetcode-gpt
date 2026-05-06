@@ -7,7 +7,7 @@ class Solution:
         # X is (n, m), weights is (m,) -> return (n,) predictions
         # Round to 5 decimal places
         # model_pred = X @ weights
-        model_pred = np.matmul(X, weights) # Faster than @ operator
+        model_pred = np.dot(X, weights) # Faster than @ operator
         return np.round(model_pred, 5)
 
     def get_error(self, model_prediction: NDArray[np.float64], ground_truth: NDArray[np.float64]) -> float:
